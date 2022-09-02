@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Movies from "./components/movies";
 import Customers from "./components/customers";
@@ -6,8 +6,9 @@ import Rentals from "./components/rentals";
 import NotFound from "./components/notFound";
 import NavBar from "./components/common/navBar";
 import MovieForm from "./components/movieForm";
-import "./App.css";
 import Login from "./components/loginForm";
+import Register from "./components/registerForm";
+import "./App.css";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <main className="Container">
         <Switch>
           <Route path="/login" component={Login}></Route>
+          <Route path="/register" component={Register}></Route>
           <Route path="/movies/:id" component={MovieForm}></Route>
           <Route path="/movies" component={Movies}></Route>
           <Route path="/customers" component={Customers}></Route>
